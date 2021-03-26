@@ -30,7 +30,7 @@ public class OTP_Receive extends BroadcastReceiver {
                     String message = (String) extras.get(SmsRetriever.EXTRA_SMS_MESSAGE);
                     try{
                         if (otpListener != null) {
-                            otpListener.onOTPReceived(message.split(":")[1].trim());
+                            otpListener.onOTPReceived(message.split(":")[1]);
                         }
                     }catch (Exception e){
                         Log.e("exception",e.toString());
